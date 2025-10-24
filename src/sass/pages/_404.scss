@@ -1,0 +1,16 @@
+@use '../base' as *;
+
+.error404-content {
+  padding: 45px 0 80px;
+  min-height: calc(100vh - 417px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .button {
+    margin-top: 24px;
+  }
+}

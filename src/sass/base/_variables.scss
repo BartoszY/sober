@@ -1,0 +1,123 @@
+// @font-face {
+// 	font-family: 'IBM Plex Mono';
+// 	src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+  src: url('../fonts/IBMPlexMono-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+  src: url('../fonts/IBMPlexMono-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+  src: url('../fonts/IBMPlexMono-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+// secondary font
+@font-face {
+	font-family: 'Ingrafts';
+  src: url('../fonts/Ingrafts-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+/* Colors */ 
+$color-primary: #FF0066;
+$color-secondary: #FF6634;
+$color-text: #1F1F1F;
+$font-primary: 'IBM Plex Mono', sans-serif;
+$font-secondary: 'Ingrafts', sans-serif;
+
+$container-size: 1374px;
+$header-height: 98px;
+$mobile-header-height: 68px;
+$admin-bar-height: 32px;
+
+
+@mixin sm() {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+@mixin to-sm() {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin to-md() {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin to-lg() {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+@mixin to-xl() {
+  @media only screen and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin xxl() {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin to-xxl() {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin min($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin max($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../base' as *;
+
+.button {
+  position: relative;
+  z-index: 10;
+  padding: 16px 24px;
+  border-radius: 48px !important;
+  border: 0;
+  background: linear-gradient(90deg, #FF0066 0%, #FF6634 100%);
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  transition: .3s;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  &:hover {
+    opacity: .75;
+  }
+
+  // &--white {
+  //   background: #fff;
+  //   color: $color-text;
+  // }
+
+  &--outline {
+    border: 1px solid #F6F6F6;
+    background: transparent;
+    color: #F6F6F6;
+
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--arrow {
+    &::after {
+      content: url('../img/arrow.svg');
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+
+// .link {
+//   font-weight: 400;
+//   font-size: 16px;
+//   text-decoration: underline;
+
+//   &:hover {
+//     opacity: .75;
+//   }
+// }
+
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+ 
+  &--center {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../base' as *;
+
+.footer {
+  padding: 28px 0;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    @include to-lg {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include lg {
+      gap: 40px;
+    }
+
+    .menu-item {
+      transition: .3s;
+      
+      @include lg {
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

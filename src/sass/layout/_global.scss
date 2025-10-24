@@ -1,0 +1,91 @@
+@use '../base' as *;
+
+
+html {
+  margin: 0 !important;
+  scroll-behavior: smooth;
+}
+
+section, article {
+  scroll-margin-top: 64px;
+  
+  @include lg {
+    scroll-margin-top: 106px;
+  }
+}
+
+.main {
+  padding-top: $mobile-header-height;
+
+  @include lg {
+    padding-top: $header-height;
+  }
+}
+body.admin-bar .main {
+  padding-top: calc(#{$mobile-header-height} + #{$admin-bar-height});
+
+  @include lg {
+    padding-top: calc(#{$header-height} + #{$admin-bar-height});
+  }
+}
+
+
+
+.container {
+  width: $container-size;
+  max-width: 100%; 
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include md {
+    padding: 0 32px;
+  }
+
+  // &--narrow {
+  //   width: 982px;
+  // }
+
+  // &--medium {
+  //   width: 1340px;
+  // }
+
+  // &--wide {
+  //   width: 1640px;
+  // }
+}
+
+
+hr {
+  height: 1px;
+  outline: 0;
+  margin: 0;
+  border-top: 1px solid #0000003D;
+}
+
+
+.sm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: .3s;
+
+    .dashicons {
+      font-size: 24px;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+
+
+// body.touch-device {
+ 
+// }

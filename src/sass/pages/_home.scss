@@ -1,0 +1,151 @@
+@use '../base' as *;
+
+.h-hero {
+  position: relative;
+
+  @include lg {
+    &::before {
+      content: url('../img/h-hero-elipse-1.svg');
+      position: absolute;
+      right: 0;
+      bottom: 10%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: url('../img/h-hero-elipse-2.svg');
+      position: absolute;
+      right: 30%;
+      top: 10%;
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__content {
+    padding: 32px 0 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    width: min(600px, 100%);
+    color: #F6F6F6; 
+
+    @include lg {
+      min-height: 700px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 32px !important;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include lg {
+      margin-bottom: 48px;
+    }
+
+    @include to-lg {
+      margin-top: 48px;
+    }
+  }
+}
+
+
+
+
+.h-about {
+  .container {
+    @include lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  &__content {
+    padding: 64px 0 24px;
+    
+    @include lg {
+      padding: 80px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    display: block;
+  }
+}
+
+
+.h-program {
+  padding: 64px 0;
+
+  @include lg {
+    padding: 100px 0;
+  }
+
+ .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+
+    @include lg {
+      display: grid;
+      grid-template-columns: 361px auto;
+      gap: 84px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(48px, 5vw, 60px);
+    
+    @include sm {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__titles {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include sm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    & > div {
+      color: $color-primary;
+    }
+
+    & > div:nth-child(odd) {
+      color: $color-secondary;
+    }
+  }
+
+  .button {
+    margin-top: 32px;
+  }
+}
