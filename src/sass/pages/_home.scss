@@ -149,3 +149,23 @@
     margin-top: 32px;
   }
 }
+
+
+
+.h-contact {
+  margin: 80px 0;
+
+  .container {
+    @include lg {
+      display: grid;
+      grid-template-columns: 361px auto;
+      gap: 84px;
+    }
+  }
+
+  &__form {
+    @include to-lg {
+      margin-top: 24px;
+    }
+  }
+}

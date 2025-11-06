@@ -104,6 +104,24 @@ get_header();
   </section>
   <?php endif; ?>
 
+  
+
+  <?php $contact = get_field('contact'); if ($contact) : ?>
+  <section class="h-contact" id="kontakt">
+    <div class="container">
+      <div>
+        <h2 class="heading"><?= $contact['title'] ?></h2>
+      </div>
+
+      <div class="h-contact__form">
+        <?php if ($contact['form_shortcode']) : ?>
+        <?php echo do_shortcode( $contact['form_shortcode'] ); ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
 <?php endwhile; ?>
 </main>
 
