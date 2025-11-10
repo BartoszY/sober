@@ -6,6 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<?php wp_head(); ?>
+
+	<!-- GetResponse Analytics -->
+	<script type="text/javascript">
+	(function(m, o, n, t, e, r, _) {
+		m['__GetResponseAnalyticsObject'] = e;
+		m[e] = m[e] || function() {
+			(m[e].q = m[e].q || []).push(arguments);
+		};
+		r = o.createElement(n);
+		_ = o.getElementsByTagName(n)[0];
+		r.async = 1;
+		r.src = 'https://Gr-wconan.gr-wcon.com/script/75a7e5fa-0df7-4564-8347-5c944f0e10c7/ga.js';
+		r.setAttribute('crossorigin', 'use-credentials');
+		_.parentNode.insertBefore(r, _);
+	})(window, document, 'script', 0, 'GrTracking');
+	</script>
+	<!-- End GetResponse Analytics -->
+
 </head>
 <body <?php body_class(); ?>>
 
