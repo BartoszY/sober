@@ -89,3 +89,43 @@ hr {
 // body.touch-device {
  
 // }
+
+
+.page-header {
+  padding: 32px 0 48px;
+  background: #000;
+  background-image: url('../img/header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  .bread-crumbs {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    .custom-sep {
+      margin: 0 8px;
+      width: 16px;
+      height: 10px;
+      display: inline-block;
+      background-image: url('../img/arrow.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    margin-top: 24px;
+    // font-size: 32px;
+    // line-height: 1.1;
+
+    // @include md {
+    //   font-size: 40px;
+    // }
+  }
+}

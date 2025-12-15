@@ -25,7 +25,7 @@ get_header();
 
         <div>
           <?php if ($hero['title']) : ?>
-          <h1 class="heading h-hero__title"><?= $hero['title'] ?></h1>
+          <h1 class="heading heading--l h-hero__title"><?= $hero['title'] ?></h1>
           <?php endif; ?>
           
           <?php if ($hero['links']) : ?>
@@ -103,21 +103,19 @@ get_header();
     </div>
   </section>
   <?php endif; ?>
-
+  
   
 
-  <?php $contact = get_field('contact'); if ($contact) : ?>
-  <section class="h-contact" id="kontakt">
+  <?php $logos = get_field('logos'); if ($logos) : ?>
+  <section class="h-logos">
     <div class="container">
-      <div>
-        <h2 class="heading"><?= $contact['title'] ?></h2>
-      </div>
+      <?php foreach ($logos as $item) : ?>
 
-      <div class="h-contact__form">
-        <?php if ($contact['form_shortcode']) : ?>
-        <?php echo do_shortcode( $contact['form_shortcode'] ); ?>
-        <?php endif; ?>
+      <div class="h-logos__item">
+        <img src="<?= $item['logo']['sizes']['medium'] ?>" alt="<?= $item['logo']['alt'] ?>">
       </div>
+        
+      <?php endforeach; ?>
     </div>
   </section>
   <?php endif; ?>

@@ -1,0 +1,19 @@
+@use '../base' as *;
+
+.contact {
+  margin: 80px 0;
+
+  .container {
+    @include lg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 92px;
+    }
+  }
+
+  &__form {
+    @include to-lg {
+      margin-top: 24px;
+    }
+  }
+}

@@ -12,7 +12,7 @@ const burgerMenu = () => {
     });
   }
 
-  const menuWrapper = document.querySelector('.header__menu');
+  const menuWrapper = document.querySelector('.header__nav');
   if (!menuWrapper) return;
 
   menuWrapper.addEventListener('click', (e) => {
@@ -29,10 +29,15 @@ const burgerMenu = () => {
 
     if (
       e.target.nodeName == 'A' &&
-      e.target.parentElement.classList.contains('menu-item-has-children') &&
-      e.target.getAttribute('href').includes('#')
+      e.target.parentElement.classList.contains('menu-item-has-children')
     ) {
       e.preventDefault();
+      return;
+    }
+
+    if (e.target.nodeName == 'A') {
+      document.body.classList.remove('nav-active');
+      burger.setAttribute('aria-expanded', false);
     }
   });
 

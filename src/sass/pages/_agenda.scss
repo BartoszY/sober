@@ -1,0 +1,191 @@
+@use '../base' as *;
+
+.agenda {
+  margin: 56px 0;
+  
+  &__days {
+    text-align: center;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__day {
+    color: #00000033;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.05;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    transition: .3s;
+        
+    &.active {
+      padding-bottom: 12px;
+      border-bottom: 3px solid $color-secondary;
+      color: #000;
+    }
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+
+
+.event-row {
+  margin: 16px 0;
+  background: #fff;
+  box-shadow: 0px 18px 20px 0px #0000000F;
+  border: 1px solid #fff;
+
+  @include lg {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    gap: 32px;
+  }
+
+  &__hours {
+    margin: 16px 0;
+    color: $color-secondary;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+
+    @include to-lg {
+      padding: 26px 26px 0;
+      margin: 0;
+    }
+    
+    @include md {
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #00000024;
+    }
+
+    strong {
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 1;
+      color: #000;
+    }
+  }
+
+  &__content {
+    padding: 26px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: 0;
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-primary;
+    cursor: pointer;
+    transition: .3s;
+
+    &::after {
+      content: url('../img/arrow-more.svg');
+      display: block;
+      transition: .3s;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__more {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: .3s;
+
+    p:first-of-type {
+      margin-top: 24px !important;
+    }
+  }
+
+  &.active {
+    border-color: #000;
+
+    .event-row__more-button {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .event-row__more {
+      opacity: 1;
+      max-height: 1000px;
+    }
+  }
+
+  &__prelegents {
+    background: #FFF8F6;
+    padding: 16px 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__item {
+      margin: 4px 0;
+      position: relative;
+      display: grid;
+      grid-template-columns: 40px auto;
+      align-items: center;
+      gap: 16px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.05;
+
+      &:hover {
+        color: $color-secondary;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        background-image: url('../img/joy.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 34px;
+        height: 34px;
+      }
+
+      img {
+        position: relative;
+        height: 40px;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+
+.page-template-agenda {
+  .buttons--center {
+    margin-bottom: 56px;
+  }
+}

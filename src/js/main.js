@@ -1,5 +1,6 @@
 // import AOS from 'aos';
 import { burgerMenu, fixedHeader } from './components/header';
+import { eventToggleMoreText } from './components/event';
 
 
 if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
@@ -11,6 +12,8 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
 
 burgerMenu();
 fixedHeader();
+
+eventToggleMoreText();
 
 // window.addEventListener('load', () => {
 //   // 

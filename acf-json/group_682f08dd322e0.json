@@ -442,8 +442,8 @@
             ]
         },
         {
-            "key": "field_690cc864dd854",
-            "label": "Kontakt",
+            "key": "field_693bdfbd7936e",
+            "label": "Logos",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -460,11 +460,11 @@
             "selected": 0
         },
         {
-            "key": "field_690cc869dd855",
-            "label": "Kontakt",
-            "name": "contact",
+            "key": "field_693bdfc67936f",
+            "label": "Logos",
+            "name": "logos",
             "aria-label": "",
-            "type": "group",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -473,14 +473,20 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Dodaj wiersz",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_690cc869dd858",
-                    "label": "Tytuł",
-                    "name": "title",
+                    "key": "field_693bdfd079370",
+                    "label": "Logo",
+                    "name": "logo",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -489,33 +495,18 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_690cc88ddd85d",
-                    "label": "Form (shortcode)",
-                    "name": "form_shortcode",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "preview_size": "medium",
+                    "parent_repeater": "field_693bdfc67936f"
                 }
             ]
         }
@@ -541,5 +532,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762445463
+    "modified": 1765531621
 }

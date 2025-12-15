@@ -112,4 +112,7 @@ remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
 
 
 
-
+/**
+ * Translations
+ */
+include_once('inc/translations.php');

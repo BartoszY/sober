@@ -1,0 +1,114 @@
+@use '../base' as *;
+
+.cta-form {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9000;
+  display: none;
+  justify-content: flex-end;
+  opacity: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    z-index: -1;
+  }
+
+  &.is-active {
+    display: flex;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 24px;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateX(100%);
+
+    @include lg {
+      width: 60vw;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__content {
+    @include md {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 24px;
+    }
+    
+    @include lg {
+      grid-gap: 80px;
+    }
+
+    &__row {
+      border-left: 1px solid #000;
+      margin: 20px 0;
+      padding-left: 32px;
+
+      font-size: 16px;
+      
+      .label {
+        color: #000;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #000;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    border: 1px solid #000;
+    margin-top: 24px;
+    padding: 24px;
+
+    label {
+      width: 100%;
+    }
+
+    textarea {
+      height: 90px;
+    }
+  }
+}
