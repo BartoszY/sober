@@ -26,10 +26,10 @@
     opacity: .75;
   }
 
-  // &--white {
-  //   background: #fff;
-  //   color: $color-text;
-  // }
+  &--white {
+    background: #fff;
+    color: $color-primary;
+  }
 
   &--outline {
     border: 1px solid #F6F6F6;

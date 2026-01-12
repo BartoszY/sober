@@ -19,7 +19,6 @@ get_header();
         <div>
           <?php if ($hero['subtitle']) : ?>
           <p class="h-hero__subtitle"><?= $hero['subtitle'] ?></p>
-          <img src="<?php echo esc_url( get_template_directory_uri() . '/prod/img/h-elipse-1.svg' ); ?>" alt="elipse">
           <?php endif; ?>
         </div>
 
@@ -31,7 +30,7 @@ get_header();
           <?php if ($hero['links']) : ?>
           <div class="buttons">
             <?php foreach ($hero['links'] as $key => $button) : ?>
-            <a href="<?= $button['link']['url'] ?>" target="<?= $button['link']['target'] ?>" class="button<?= $key === 0 ? ' button--arrow' : ' button--outline' ?>"><?= $button['link']['title'] ?></a>
+            <a href="<?= $button['link']['url'] ?>" target="<?= $button['link']['target'] ?>" class="button<?= $key === 0 ? ' button--white' : ' button--outline' ?>"><?= $button['link']['title'] ?></a>
             <?php endforeach; ?>
           </div>
           <?php endif; ?>
