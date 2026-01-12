@@ -29,7 +29,7 @@ get_header();
 
       <div class="contact__form">
         <?php if ($newsletter_widget_code) : ?>
-        <?php echo do_shortcode( $newsletter_widget_code ); ?>
+        <?php echo $newsletter_widget_code; ?>
         <?php endif; ?>
       </div>
     </div>
